@@ -1,0 +1,12 @@
+{
+    "reporter": "cypress-mochawesome-reporter",
+    "reporterOptions": {
+      "reportDir": "cypress/report",
+      "charts": true,
+      "reportPageTitle": "Cypress tests",
+      "embeddedScreenshots": true
+    },
+    
+    "testFiles": "**/*.spec.js"
+
+}
