@@ -1,2 +1,2 @@
 # pecode
-https://github.com/ViktoriaQA/pecode/report
+https://github.com/ViktoriaQA/pecode
