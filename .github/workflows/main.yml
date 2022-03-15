@@ -14,8 +14,8 @@ jobs:
 
       - name: Install cypress and verify
         run: |
-          npm i
-          $(npm bin)/cypress verify 
+          npm ci
+          $(npm bin)/cypress verify
       - name: Run Cypress tests
         run: npm run test
         continue-on-error: true
