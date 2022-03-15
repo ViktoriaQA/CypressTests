@@ -17,14 +17,12 @@
 import './commands';
 import addContext from 'mochawesome/addContext'
 
-Cypress.on("test:after:run", (test, runnable) => {
+Cypress.on("test:after:run", (test, runnable) => {  /// example to-do app 15/03/22 23:37 -- displays two todo items by default (failed).png
 
-   if (test.state === 'failed'){ 
-     let screenshotName = Cypress.spec.name;
-     screenshotName = screenshot.replace('/.js.*', '.js')
-     const screenshotUrl = 'screenshots/' + screenshotName + '.png'
-     addContext({ test }, screenshotUrl )  
-   }
+  if (test.state === "failed") {    
+    const screenshot =`assets/${Cypress.spec.name}/${runnable.parent.title.replaceAll(/[/]|[:]/g, '')} -- ${test.title} (failed).png`;    
+    addContext({ test }, screenshot); 
+  }
 
 // //    let videoName = Cypress.spec.name
 // //    videoName = videoName.replace('/.js.*', '.js')
